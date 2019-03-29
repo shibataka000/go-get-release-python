@@ -36,9 +36,8 @@ def install_release_binary(go_pkg_name):
     goos = os.environ.get("GOOS")
     goarch = os.environ.get("GOARCH")
 
-    repo_name = go_pkg_name.lstrip("github.com/")
-
     g = Github()
+    repo_name = go_pkg_name.lstrip("github.com/")
     repo = g.get_repo(repo_name)
     release = repo.get_latest_release()
     logger.info("Release: %s", release.title)
