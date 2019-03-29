@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+"""
+Download golang package release binary from GitHub.
+"""
+
+import logging
+
+import click
+
+from gopkg import install_release_binary
+
+
+logger = logging.getLogger("gopkg")
+logger.setLevel(logging.DEBUG)
+
+stream_handler = logging.StreamHandler()
+stream_handler.setLevel(logging.INFO)
+logger.addHandler(stream_handler)
+
+
+@click.command()
+@click.argument("go-pkg-name")
+def cmd(go_pkg_name):
+    """
+    Download golang package release binary from GitHub.
+    """
+    install_release_binary(go_pkg_name)
+
+
+if __name__ == "__main__":
+    cmd()  # pylint: disable=no-value-for-parameter
