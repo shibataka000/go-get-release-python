@@ -1,6 +1,6 @@
 # go-get-release
 
-[![CircleCI](https://circleci.com/gh/shibataka000/go-get-release.svg?style=shield)](https://circleci.com/gh/shibataka000/go-get-release)
+[![CircleCI](https://circleci.com/gh/shibataka000/go-get-release-python.svg?style=shield)](https://circleci.com/gh/shibataka000/go-get-release-python)
 
 I want to only install golang package release binary, don't want to build golang package.
 
